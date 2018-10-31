@@ -1,0 +1,25 @@
+## Features
+
+- Gatsby v2
+- Emotion for styling
+- Code syntax highlighting
+- Tags
+- SEO
+  - Sitemap generation
+  - Schema.org JSON-LD for Google Rich Snippets
+  - OpenGraph Tags for Facebook/Google+/Pinterest
+  - Twitter Tags
+    - robots.txt
+- Typography.js
+- Typefaces for quicker font loading
+- Offline Support
+- Manifest Support
+- Gatsby Image
+  - Responsive images
+  - Traced SVG Loading (Lazy-Loading)
+  - WebP Support
+- Development tools
+  - ESLint for linting
+  - Prettier for code style
+  - CircleCI support
+  - Google Lighthouse Optimization
