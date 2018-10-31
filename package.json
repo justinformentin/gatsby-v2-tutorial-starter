@@ -21,6 +21,7 @@
     "lint": "eslint src/**/*.{js,jsx}"
   },
   "dependencies": {
+    "@babel/core": "^7.1.2",
     "babel-plugin-emotion": "^9.2.11",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
@@ -35,7 +36,6 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.8",
     "gatsby-plugin-sitemap": "^2.0.1",
-    "gatsby-plugin-styled-jsx": "^3.0.1",
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-remark-images": "^2.0.4",
     "gatsby-remark-prismjs": "^3.0.2",
