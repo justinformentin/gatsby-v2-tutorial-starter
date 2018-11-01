@@ -1,10 +1,10 @@
 ---
 path: "/post-three"
-cover: "../2018-10-15/blocks.jpg"
+cover: "./blocks.jpg"
 slug: "post-three"
 date: "2018-10-17"
 title: "Post Number Three"
-tags: ['gatsby', 'other']
+tags: ['gatsby', 'news', 'other']
 published: true
 ---
 Harmonics. Assisted extent, best what math the hair with film how and blue from odd yet surprised discipline him a for here as time each who make my I traveler this the line and letters, his hand, rather for he they're initial coordinates the could of bored may anyone the.

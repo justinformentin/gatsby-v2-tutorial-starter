@@ -1,9 +1,9 @@
 ---
 path: "/tutorial"
-cover: "../2018-10-16/illustration.jpg"
+cover: "./code.jpg"
 slug: "tutorial"
 date: "2018-10-20"
-title: "Tutorial On How to Build This Site"
+title: "Tutorial Article"
 tags: ['gatsby', 'tutorial']
 published: true
 ---

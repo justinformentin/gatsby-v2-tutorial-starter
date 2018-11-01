@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "gatsby-tutorial-starter",
   "author": "Justin Formentin",
   "title": "Gatsby V2 Tutorial Starter",
   "description": "My Blog",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
   "license": "MIT",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
@@ -53,6 +53,17 @@
     "typeface-candal": "0.0.54",
     "typeface-open-sans": "0.0.54",
     "typography": "^0.16.17"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "lighthouse": "^3.2.1",
+    "prettier": "^1.14.3"
   },
   "keywords": [
     "justin formentin",

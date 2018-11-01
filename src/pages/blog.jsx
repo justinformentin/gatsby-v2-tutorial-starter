@@ -1,55 +1,63 @@
-import React from 'react'
-import { graphql,  } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import Layout from '../layouts'
-import styled from 'react-emotion'
-import PostList from '../components/PostList'
-import Header from '../components/Header'
+import PropTypes from 'prop-types';
 
-const PostsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 5rem 3rem 1rem 3rem;
-`
+import Layout from '../layouts';
+import BlogList from '../components/BlogList';
+import Header from '../components/Header';
 
 const Blog = ({ data }) => {
-  const { edges } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-    <Helmet title={`Blog Page`} />
-      <Header title= 'Blog Page'>
-        Gatsby Tutorial Starter
-      </Header>
-      <PostsWrapper>
-        {edges.map(({ node }) => (
-          <PostList
-            key={node.id}
-            cover={node.frontmatter.cover.childImageSharp.fluid}
-            path={node.frontmatter.path}
-            title={node.frontmatter.title}
-            date={node.frontmatter.date}
-            tags={node.frontmatter.tags}
-            excerpt={node.excerpt}
-          />
-        ))}
-      </PostsWrapper>
+      <Helmet title={'Blog Page'} />
+      <Header title="Blog Page">Gatsby Tutorial Starter</Header>
+      {edges.map(({ node }) => (
+        <BlogList
+          key={node.id}
+          cover={node.frontmatter.cover.childImageSharp.fluid}
+          path={node.frontmatter.path}
+          title={node.frontmatter.title}
+          date={node.frontmatter.date}
+          tags={node.frontmatter.tags}
+          excerpt={node.excerpt}
+        />
+      ))}
     </Layout>
   );
 };
 
 export default Blog;
 
+Blog.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            excerpt: PropTypes.string,
+            frontmatter: PropTypes.shape({
+              cover: PropTypes.object.isRequired,
+              path: PropTypes.string.isRequired,
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              tags: PropTypes.array,
+            }),
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+};
+
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
-          excerpt(pruneLength: 75)
+          excerpt(pruneLength: 200)
           frontmatter {
             title
             path
@@ -57,7 +65,11 @@ export const query = graphql`
             date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {
-                fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {
+                fluid(
+                  maxWidth: 1000
+                  quality: 90
+                  traceSVG: { color: "#2B2B2F" }
+                ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
@@ -67,4 +79,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: */tags/
+
+sitemap: https://gatsby-starter-tutorial.netlify.com/sitemap.xml

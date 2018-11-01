@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'react-emotion'
-import theme from '../../config/theme'
+import React from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import theme from '../../config/theme';
 
 const ImageOverlay = styled.div`
   border-radius: ${props => props.theme.borderRadius.default};
@@ -19,7 +20,7 @@ const ImageOverlay = styled.div`
     ${props => props.theme.colors.primary.light} 0%,
     ${props => props.theme.colors.primary.dark} 100%
   );
-`
+`;
 
 const Wrapper = styled.article`
   margin-bottom: 2rem;
@@ -28,7 +29,7 @@ const Wrapper = styled.article`
   border-radius: ${props => props.theme.borderRadius.default};
   box-shadow: ${props => props.theme.shadow.feature.small.default};
   transition: ${props => props.theme.transitions.boom.transition};
-  height: 20rem;
+  height: 17rem;
   &:hover {
     box-shadow: ${props => props.theme.shadow.feature.small.hover};
     transform: translateY(-12px);
@@ -39,7 +40,7 @@ const Wrapper = styled.article`
   flex-basis: calc(99.9% * 1 / 3 - 2.5rem);
   max-width: calc(99.9% * 1 / 3 - 2.5rem);
   width: calc(99.9% * 1 / 3 - 2.5rem);
-  @media (max-width: 1340px) {
+  @media (max-width: 1200px) {
     height: 25rem;
     flex-basis: 100%;
     max-width: 100%;
@@ -52,7 +53,7 @@ const Wrapper = styled.article`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     height: 15rem;
   }
-`
+`;
 
 const StyledLink = styled(Link)`
   position: absolute;
@@ -92,7 +93,7 @@ const StyledLink = styled(Link)`
       opacity: 0;
     }
   }
-`
+`;
 
 const Image = styled.div`
   position: absolute;
@@ -113,7 +114,7 @@ const Image = styled.div`
   > div > div {
     position: static !important;
   }
-`
+`;
 
 const Title = styled.div`
   color: ${props => props.theme.colors.white.light};
@@ -121,21 +122,29 @@ const Title = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-`
-const PostList = ({ cover, path, date, title, excerpt}) => (
+`;
+const PostList = ({ cover, path, date, title, excerpt }) => (
   <Wrapper>
     <Image>
       <Img fluid={cover} />
     </Image>
     <StyledLink to={path}>
       <Title>
-      <span>{date}</span>
-      <h2>{title}</h2>
-      <span>{excerpt}</span>
+        <span>{date}</span>
+        <h2>{title}</h2>
+        <span>{excerpt}</span>
       </Title>
     </StyledLink>
     <ImageOverlay />
   </Wrapper>
-)
+);
 
-export default PostList
+export default PostList;
+
+PostList.propTypes = {
+  cover: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+  excerpt: PropTypes.string,
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

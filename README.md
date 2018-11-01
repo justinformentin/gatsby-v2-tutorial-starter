@@ -9,7 +9,7 @@
   - Schema.org JSON-LD for Google Rich Snippets
   - OpenGraph Tags for Facebook/Google+/Pinterest
   - Twitter Tags
-    - robots.txt
+  - robots.txt
 - Typography.js
 - Typefaces for quicker font loading
 - Offline Support

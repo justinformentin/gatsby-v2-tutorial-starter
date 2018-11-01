@@ -1,12 +1,13 @@
-import React, { Fragment } from 'react'
-import { ThemeProvider } from 'emotion-theming'
-import { injectGlobal } from 'react-emotion'
-import 'typeface-open-sans'
-import 'typeface-candal'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import SEO from '../components/SEO'
-import theme from '../../config/theme'
+import React, { Fragment } from 'react';
+import { ThemeProvider } from 'emotion-theming';
+import { injectGlobal } from 'react-emotion';
+import PropTypes from 'prop-types';
+import 'typeface-open-sans';
+import 'typeface-candal';
+import NavBar from './NavBar';
+import Footer from './Footer';
+import SEO from '../components/SEO';
+import theme from '../../config/theme';
 import headroom from '../styles/headroom';
 
 injectGlobal`
@@ -54,9 +55,7 @@ injectGlobal`
   ${headroom}
 `;
 
-
 const Layout = ({ children }) => (
-
   <ThemeProvider theme={theme}>
     <Fragment>
       <SEO />
@@ -65,7 +64,10 @@ const Layout = ({ children }) => (
       <Footer />
     </Fragment>
   </ThemeProvider>
+);
 
-)
+export default Layout;
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
+};

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import prism from '../styles/prism';
+
 const Wrapper = styled.div`
   ${prism};
   p,
@@ -57,6 +59,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const Content = ({ input }) => <Wrapper dangerouslySetInnerHTML={{ __html: input }} />;
+const Content = ({ input }) => (
+  <Wrapper dangerouslySetInnerHTML={{ __html: input }} />
+);
 
 export default Content;
+
+Content.propTypes = {
+  input: PropTypes.any.isRequired,
+};

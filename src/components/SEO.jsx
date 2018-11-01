@@ -86,7 +86,9 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             <meta name="image" content={seo.image} />
             <meta name="apple-mobile-web-app-title" content={shortName} />
             <meta name="application-name" content={shortName} />
-            <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+            <script type="application/ld+json">
+              {JSON.stringify(schemaOrgJSONLD)}
+            </script>
 
             {/* OpenGraph  */}
             <meta property="og:url" content={seo.url} />
@@ -101,7 +103,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             <meta name="twitter:title" content={seo.title} />
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
-            </Helmet>
+          </Helmet>
         </>
       );
     }}
@@ -110,7 +112,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
 //   }
 // }
 
-export default SEO
+export default SEO;
 
 SEO.propTypes = {
   title: PropTypes.string,

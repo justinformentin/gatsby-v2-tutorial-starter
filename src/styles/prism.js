@@ -1,5 +1,5 @@
-import { css } from 'react-emotion'
-import theme from '../../config/theme'
+import { css } from 'react-emotion';
+import theme from '../../config/theme';
 
 const prism = css`
   p > code,
@@ -105,7 +105,7 @@ const prism = css`
   .token.class-name {
     color: #e6db74;
   }
-  .token.function{
+  .token.function {
     color: #84c16a;
   }
 
@@ -126,6 +126,6 @@ const prism = css`
   .token.entity {
     cursor: help;
   }
-`
+`;
 
-export default prism
+export default prism;
