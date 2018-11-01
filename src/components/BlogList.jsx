@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import TagsBlock from './TagsBlock';
+import { TagsBlock } from 'components';
 
 const Wrapper = styled.article`
   display: flex;

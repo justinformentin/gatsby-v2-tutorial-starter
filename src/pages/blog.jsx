@@ -2,10 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-
-import Layout from '../layouts';
-import BlogList from '../components/BlogList';
-import Header from '../components/Header';
+import { Header, BlogList } from 'components';
+import { Layout } from 'layouts';
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
