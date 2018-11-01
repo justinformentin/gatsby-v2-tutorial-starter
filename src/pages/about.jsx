@@ -2,9 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import Layout from '../layouts';
-import Header from '../components/Header';
-import Container from '../layouts/Container';
+import { Header } from 'components';
+import { Layout, Container } from 'layouts';
 
 const Text = styled.div`
     margin: 2rem 10rem;

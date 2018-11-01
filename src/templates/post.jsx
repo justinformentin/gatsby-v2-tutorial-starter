@@ -2,12 +2,12 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import Layout from '../layouts';
-import TagsBlock from '../components/TagsBlock';
-import Header from '../components/Header';
-import Container from '../layouts/Container';
-import Content from '../components/Content';
-import SEO from '../components/SEO';
+import { Layout, Container, Content } from 'layouts';
+import { TagsBlock, Header, SEO } from 'components';
+// import Header from '../components/Header';
+// import Container from '../layouts/Container';
+// import Content from '../layouts/Content';
+// import SEO from '../components/SEO';
 import '../styles/prism';
 
 const SuggestionBar = styled.div`
@@ -70,8 +70,8 @@ export default Post;
 
 Post.propTypes = {
   pageContext: PropTypes.shape({
-    prev: PropTypes.object.isRequired,
-    next: PropTypes.object.isRequired,
+    prev: PropTypes.object,
+    next: PropTypes.object,
   }).isRequired,
   data: PropTypes.object.isRequired,
 };

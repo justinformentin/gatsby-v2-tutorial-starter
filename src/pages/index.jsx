@@ -1,11 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Layout from '../layouts';
 import Helmet from 'react-helmet';
-import Header from '../components/Header';
 import styled from 'react-emotion';
-import PostList from '../components/PostList';
+import { Header, PostList } from 'components';
+import { Layout } from 'layouts';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -63,7 +62,7 @@ Index.propTypes = {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      limit: 3
+      limit: 6
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

@@ -20,6 +20,7 @@ const Text = styled.div`
   text-align: center;
   color: ${props => props.theme.colors.white.light};
 `;
+
 const Footer = () => (
   <Wrapper>
     <Text>
