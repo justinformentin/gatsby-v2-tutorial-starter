@@ -2,7 +2,7 @@ const config = require('./config/site');
 
 module.exports = {
   siteMetadata: {
-    ...config
+    ...config,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,7 +11,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/content/posts`
+        path: `${__dirname}/content/posts`,
       },
     },
     'gatsby-transformer-sharp',
@@ -25,17 +25,17 @@ module.exports = {
               maxWidth: 750,
               quality: 90,
               linkImagesToOriginal: true,
-            }
+            },
           },
-            'gatsby-remark-prismjs',
-
-        ]
-      }
+          'gatsby-remark-prismjs',
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-emotion',
       options: {
         autoLabel: process.env.NODE_ENV !== 'production',
+        // eslint-disable-next-line
         labelFormat: `[filename]--[local]`,
       },
     },
@@ -60,6 +60,6 @@ module.exports = {
         icon: config.favicon,
       },
     },
-    'gatsby-plugin-offline'
-  ]
-}
+    'gatsby-plugin-offline',
+  ],
+};
