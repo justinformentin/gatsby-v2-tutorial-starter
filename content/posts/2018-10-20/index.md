@@ -1,6 +1,6 @@
 ---
 path: "/tutorial"
-cover: "./code.jpg"
+cover: "../2018-10-17/finance.jpg"
 slug: "tutorial"
 date: "2018-10-20"
 title: "Tutorial Article"

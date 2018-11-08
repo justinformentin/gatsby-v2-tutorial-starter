@@ -1,6 +1,6 @@
 ---
 path: "/post-four"
-cover: "./illustration.jpg"
+cover: "../2018-10-15/blocks.jpg"
 slug: "post-four"
 date: "2018-10-18"
 title: "Post Number Four"
