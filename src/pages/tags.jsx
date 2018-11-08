@@ -5,7 +5,7 @@ import { Header, TagsBlock } from 'components';
 
 const Tags = ({ pageContext }) => {
   const { tags } = pageContext;
-
+console.log(pageContext)
   return (
     <Layout>
       <Header title="Tags Page">Gatsby Tutorial Starter</Header>
@@ -20,6 +20,6 @@ export default Tags;
 
 Tags.propTypes = {
   pageContext: PropTypes.shape({
-    tags: PropTypes.string,
+    tags: PropTypes.array,
   }),
 };

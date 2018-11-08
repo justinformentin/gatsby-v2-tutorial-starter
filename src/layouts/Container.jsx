@@ -7,6 +7,9 @@ const Wrapper = styled.section`
   margin: auto;
   padding: 3rem 1.5rem;
   width: 60%;
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    width: 90%;
+  }
   max-width: ${props => props.theme.layout[props.type]};
   height: 100%;
   flex: 1;
