@@ -47,9 +47,6 @@ injectGlobal`
   h1{
     font-family: ${theme.fontFamily.heading};
   }
-  h2, h3, h4 {
-    margin-bottom: 2rem;
-  }
 
   ${headroom}
 `;

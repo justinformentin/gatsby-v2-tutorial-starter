@@ -4,16 +4,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { TagsBlock } from 'components';
+import { Container } from 'layouts';
 
 const Wrapper = styled.article`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 5rem 3rem;
+  margin: 0 3rem;
 `;
 
 const Image = styled.div`
+  margin: auto;
   position: relative;
   box-shadow: ${props => props.theme.shadow.feature.small.default};
   transition: ${props => props.theme.transitions.boom.transition};
@@ -24,7 +22,7 @@ const Image = styled.div`
   }
   &:hover {
     box-shadow: ${props => props.theme.shadow.feature.small.hover};
-    transform: translateY(-12px);
+    transform: scale(1.04);
   }
   a {
     position: absolute;
@@ -44,9 +42,9 @@ const Image = styled.div`
       box-shadow: 0 0 0 5px ${props => props.theme.colors.primary.dark};
     }
   }
-  flex-basis: calc(99.9% * 2 / 5 - 1rem);
-  max-width: calc(99.9% * 2 / 5 - 1rem);
-  width: calc(99.9% * 2 / 5 - 1rem);
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 100%;
   @media (max-width: 800px) {
     flex-basis: 100%;
     max-width: 100%;
@@ -68,9 +66,10 @@ const Information = styled.div`
       color: ${props => props.theme.colors.primary.base};
     }
   }
-  flex-basis: calc(99.9% * 3 / 5 - 1rem);
-  max-width: calc(99.9% * 3 / 5 - 1rem);
-  width: calc(99.9% * 3 / 5 - 1rem);
+  text-align: center;
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 100%;
   @media (max-width: 800px) {
     flex-basis: 100%;
     max-width: 100%;
@@ -79,25 +78,32 @@ const Information = styled.div`
 `;
 
 const Date = styled.div`
+  margin-top: 1rem;
   color: ${props => props.theme.colors.black.lighter};
 `;
 
+const Title = styled.h1`
+  margin: 0;
+`;
+
 const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
-  <Wrapper>
-    <Image>
-      <Link to={path} title={title}>
-        <Img fluid={cover} />
-      </Link>
-    </Image>
-    <Information>
-      <Date>{date}</Date>
-      <Link to={path}>
-        <h1>{title}</h1>
-      </Link>
-      <TagsBlock list={tags} />
-      {`${excerpt}...`}
-    </Information>
-  </Wrapper>
+  <Container>
+    <Wrapper>
+      <Image>
+        <Link to={path} title={title}>
+          <Img fluid={cover} />
+        </Link>
+      </Image>
+      <Information>
+        <Date>{date}</Date>
+        <Link to={path}>
+          <Title>{title}</Title>
+        </Link>
+        <TagsBlock list={tags} />
+        {excerpt}
+      </Information>
+    </Wrapper>
+  </Container>
 );
 
 export default BlogList;
