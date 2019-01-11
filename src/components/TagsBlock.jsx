@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 const TagsContainer = styled.div`
@@ -12,7 +12,7 @@ const TagsContainer = styled.div`
   a {
     margin: 0 1rem 1rem 0;
     color: ${props => props.theme.colors.black.blue};
-    padding: .3rem .6rem;
+    padding: 0.3rem 0.6rem;
     background: ${props => props.theme.colors.white.grey};
     border-radius: 10px;
     &:hover {
@@ -20,6 +20,7 @@ const TagsContainer = styled.div`
       background: ${props => props.theme.colors.primary.light};
       border: ${props => props.theme.colors.primary.light};
     }
+  }
 `;
 
 const TagsBlock = ({ list }) => (

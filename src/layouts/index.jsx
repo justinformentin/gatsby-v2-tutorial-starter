@@ -1,7 +1,5 @@
-import Container from './Container';
-import Content from './Content';
-import Footer from './Footer';
-import Layout from './Layout';
-import NavBar from './NavBar';
-
-export { Container, Content, Footer, Layout, NavBar };
+export { default as Container } from './Container';
+export { default as Content } from './Content';
+export { default as Footer } from './Footer';
+export { default as Layout } from './Layout';
+export { default as NavBar } from './NavBar';

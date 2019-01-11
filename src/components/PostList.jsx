@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import theme from '../../config/theme';
 
@@ -13,20 +13,22 @@ const Wrapper = styled.article`
   box-shadow: ${props => props.theme.shadow.feature.small.default};
   transition: ${props => props.theme.transitions.boom.transition};
   height: 17rem;
-  &:hover {
-    box-shadow: ${props => props.theme.shadow.feature.small.hover};
-    transform: scale(1.04);
-    }
-  }
   flex-basis: calc(99.9% * 1 / 3 - 2.5rem);
   max-width: calc(99.9% * 1 / 3 - 2.5rem);
   width: calc(99.9% * 1 / 3 - 2.5rem);
+
+  &:hover {
+    box-shadow: ${props => props.theme.shadow.feature.small.hover};
+    transform: scale(1.04);
+  }
+
   @media (max-width: 1000px) {
     flex-basis: calc(99.9% * 1 / 2 - 1rem);
     max-width: calc(99.9% * 1 / 2 - 1rem);
     width: calc(99.9% * 1 / 2 - 1rem);
     height: 18rem;
   }
+
   @media (max-width: 700px) {
     flex-basis: 100%;
     max-width: 100%;
