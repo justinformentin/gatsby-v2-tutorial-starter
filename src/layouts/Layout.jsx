@@ -33,7 +33,6 @@ injectGlobal`
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
   }
   a {
     color: ${theme.colors.link};
