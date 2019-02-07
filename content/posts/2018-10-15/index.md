@@ -1,10 +1,9 @@
 ---
 path: "/post-one"
 cover: "./blocks.jpg"
-slug: "post-one"
 date: "2018-10-15"
 title: "Post Number One"
-published: false
+published: true
 tags: ['website', 'react', 'other']
 ---
 Office other said we've that with belt it goddesses, clean be contribution the years, by we found. In how a remedies. Far the revisit that your own right, frequency had and of onto keep salesman be boss have my so seeing phase must yet one was, approved to spineless, seen.

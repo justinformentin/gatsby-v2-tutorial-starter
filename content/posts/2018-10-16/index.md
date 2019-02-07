@@ -1,7 +1,6 @@
 ---
 path: "/post-two"
 cover: "./speed.jpg"
-slug: "post-two"
 date: "2018-10-16"
 title: "Post Number Two"
 published: true

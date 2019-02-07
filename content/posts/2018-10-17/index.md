@@ -1,7 +1,6 @@
 ---
 path: "/post-three"
 cover: "./finance.jpg"
-slug: "post-three"
 date: "2018-10-17"
 title: "Post Number Three"
 tags: ['gatsby', 'news', 'other']

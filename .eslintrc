@@ -21,7 +21,9 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "prettier/prettier": "warn"
+    "prettier/prettier": ["warn", "error", {
+     "endOfLine":"auto"
+   }]
   },
   "extends": [
     "eslint:recommended",
