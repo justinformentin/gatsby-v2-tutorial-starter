@@ -1,6 +1,6 @@
 import Typography from 'typography';
 
-const typography = new Typography({
+export const typography = new Typography({
   title: 'GatsbyTutorial',
   baseFontSize: '18px',
   baseLineHeight: 1.45,

@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   white: {
     base: '#fff',
     light: '#f0f0f0',
@@ -21,7 +21,7 @@ const colors = {
   },
 };
 
-const shadow = {
+export const shadow = {
   card: '0 20px 30px rgba(0, 0, 0, 0.1)',
   image: '0 15px 25px rgba(0, 0, 0, 0.1)',
   suggestion: '0 -5px 30px rgba(0,0,0,0.2)',
@@ -42,20 +42,20 @@ const shadow = {
   },
 };
 
-const gradient = {
+export const gradient = {
   // eslint-disable-next-line
   leftToRight: `linear-gradient(-45deg, ${colors.background.light} 0%, ${colors.background.dark} 100%)`,
   // eslint-disable-next-line
   rightToLeft: `linear-gradient(45deg, ${colors.background.light} 0%, ${colors.background.dark} 100%)`,
 };
 
-const transition = {
+export const transition = {
   easeInOutCubic: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
   easeOutBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
   duration: '0.4s',
 };
 
-const theme = {
+export const theme = {
   colors,
   gradient,
   shadow,
