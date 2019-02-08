@@ -62,7 +62,7 @@
 
 <p align="center">
   <strong>
-    Read the full step by step guide: <a href="https://justinformentin.com/build-gatsby-site-full-tutorial">Guide to Build a Gatsby Site with Perfect Pagespeed Scores</a></a>.
+    Read the full step by step guide: <a href="https://justinformentin.com/guide-to-building-a-gatsby-site">Guide to Build a Gatsby Site with Perfect Pagespeed Scores</a></a>.
   </strong>
 </p>
 
