@@ -53,6 +53,6 @@ export default Tag;
 Tag.propTypes = {
   pageContext: PropTypes.shape({
     posts: PropTypes.array,
-    tagname: PropTypes.string,
+    tagName: PropTypes.string,
   }),
 };
