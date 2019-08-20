@@ -20,6 +20,6 @@ const About = center => (
 
 export default About;
 
-Container.propTypes = {
+About.propTypes = {
   center: PropTypes.object,
 };

@@ -21,6 +21,6 @@ const ErrorPage = center => (
 
 export default ErrorPage;
 
-Container.propTypes = {
+ErrorPage.propTypes = {
   center: PropTypes.object,
 };
