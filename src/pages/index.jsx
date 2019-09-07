@@ -27,16 +27,20 @@ const Index = ({ data }) => {
       <Helmet title={'Home Page'} />
       <Header title="Home Page">Gatsby Tutorial Starter</Header>
       <PostWrapper>
-        {edges.map(({ node }) => (
-          <PostList
-            key={node.id}
-            cover={node.frontmatter.cover.childImageSharp.fluid}
-            path={node.frontmatter.path}
-            title={node.frontmatter.title}
-            date={node.frontmatter.date}
-            excerpt={node.excerpt}
-          />
-        ))}
+        {edges.map(({ node }) => {
+          const { id, excerpt, frontmatter } = node;
+          const { cover, path, title, date } = frontmatter;
+          return (
+            <PostList
+              key={id}
+              cover={cover.childImageSharp.fluid}
+              path={path}
+              title={title}
+              date={date}
+              excerpt={excerpt}
+            />
+          );
+        })}
       </PostWrapper>
     </Layout>
   );

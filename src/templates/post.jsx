@@ -21,24 +21,23 @@ const PostSuggestion = styled.div`
 
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
-  const post = data.markdownRemark;
-  const image = post.frontmatter.cover.childImageSharp.fluid;
-  const title = post.frontmatter.title;
-  const date = post.frontmatter.date;
-  const html = post.html;
+  const {html, frontmatter, excerpt } = data.markdownRemark
+  const {date, title, tags, path, description} = frontmatter
+  const image = frontmatter.cover.childImageSharp.fluid;
+
   return (
     <Layout>
       <SEO
         title={title}
-        description={post.frontmatter.description || post.excerpt || ' '}
+        description={description || excerpt || ' '}
         banner={image}
-        pathname={post.frontmatter.path}
+        pathname={path}
         article
       />
       <Header title={title} date={date} cover={image} />
       <Container>
         <Content input={html} />
-        <TagsBlock list={post.frontmatter.tags || []} />
+        <TagsBlock list={tags || []} />
       </Container>
       <SuggestionBar>
         <PostSuggestion>
